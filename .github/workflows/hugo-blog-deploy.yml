@@ -23,14 +23,8 @@ jobs:
       - name: Build
         run: hugo --minify --gc
 
-      - run: echo "${{ secrets.KEY }}"
-      - run: echo "${{ secrets.HOST }}"
-      - run: echo "${{ secrets.USERNAME }}"
-      - run: echo "${{ secrets.PORT }}"
-      - run: echo "${{ secrets.PATH }}"
-
       - name: Deliver
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action@v0.1.2
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
