@@ -24,11 +24,11 @@ jobs:
         run: hugo --minify --gc
 
       - name: Checks
-        - run: echo "${{ secrets.KEY }}"
-        - run: echo "${{ secrets.HOST }}"
-        - run: echo "${{ secrets.USERNAME }}"
-        - run: echo "${{ secrets.PORT }}"
-        - run: echo "${{ secrets.PATH }}"
+        run: echo "${{ secrets.KEY }}"
+        run: echo "${{ secrets.HOST }}"
+        run: echo "${{ secrets.USERNAME }}"
+        run: echo "${{ secrets.PORT }}"
+        run: echo "${{ secrets.PATH }}"
 
       - name: Deliver
         uses: appleboy/scp-action@master
